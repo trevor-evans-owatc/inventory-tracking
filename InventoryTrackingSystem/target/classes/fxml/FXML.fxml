@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="343.0" prefWidth="801.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane focusTraversable="true" layoutY="-6.0" prefHeight="381.0" prefWidth="841.0" snapToPixel="false">
+         <children>
+            <Label id="Top Label" layoutX="14.0" layoutY="36.0" text="Inventory Management Systeam" textAlignment="CENTER" />
+            <Button fx:id="exitBut" layoutX="684.0" layoutY="336.0" mnemonicParsing="false" onAction="#exit" text="Exit" />
+          <AnchorPane layoutX="224.0" layoutY="242.0" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+            <FlowPane layoutX="406.0" layoutY="65.0" prefHeight="264.0" prefWidth="356.0" style="-fx-border-color: black; -fx-border-style: round;">
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="7.0" prefWidth="197.0" text="Products">
+                     <padding>
+                        <Insets right="140.0" />
+                     </padding>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="25.0" prefWidth="143.0" promptText="search" snapToPixel="false">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TableView id="productTable" prefHeight="200.0" prefWidth="385.0">
+                    <columns>
+                      <TableColumn id="ProductIdColumn" prefWidth="75.0" text="Product ID" />
+                      <TableColumn prefWidth="89.0" text="Product Name" />
+                        <TableColumn id="productInvLevel" prefWidth="91.0" text="Inventory Level" />
+                        <TableColumn id="productPriceCost" prefWidth="142.0" text="Price / Cost per unit" />
+                    </columns>
+                  </TableView>
+                  <Button mnemonicParsing="false" text="Add" textAlignment="CENTER">
+                     <FlowPane.margin>
+                        <Insets left="180.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Modify">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" snapToPixel="false" text="Delete">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </FlowPane>
+            <FlowPane layoutX="7.0" layoutY="65.0" prefHeight="264.0" prefWidth="379.0" style="-fx-border-color: black;">
+               <children>
+                  <Label text="Parts">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="150.0" />
+                     </padding>
+                  </Label>
+                  <TextField nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefHeight="25.0" prefWidth="143.0" promptText="search" snapToPixel="false">
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TextField>
+                  <TableView id="partsTable " focusTraversable="false" prefHeight="200.0" prefWidth="367.0">
+                    <columns>
+                      <TableColumn id="prtIdColumn" prefWidth="49.0" text="Part ID" />
+                        <TableColumn id="prtNameColumn" prefWidth="70.0" text="Part Name" />
+                        <TableColumn id="inventoryLvlColumn" prefWidth="96.0" text="Inventory Level" />
+                        <TableColumn id="priceCostColumn" prefWidth="129.0" text="Price/ Cost per unit " />
+                    </columns>
+                  </TableView>
+                  <Button mnemonicParsing="false" text="Add">
+                     <FlowPane.margin>
+                        <Insets left="170.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Modify">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Delete">
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </FlowPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
