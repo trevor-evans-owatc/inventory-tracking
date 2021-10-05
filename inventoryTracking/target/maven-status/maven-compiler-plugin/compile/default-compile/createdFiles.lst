@@ -1,0 +1,7 @@
+com\goliathnerd\inventorytracking\FXMLController.class
+com\goliathnerd\inventorytracking\AddProductFormController.class
+com\goliathnerd\inventorytracking\AddPartFormController.class
+com\goliathnerd\inventorytracking\MainApp.class
+com\goliathnerd\inventorytracking\Part.class
+com\goliathnerd\inventorytracking\ModifyProductFormController.class
+com\goliathnerd\inventorytracking\ModifyPartController.class
