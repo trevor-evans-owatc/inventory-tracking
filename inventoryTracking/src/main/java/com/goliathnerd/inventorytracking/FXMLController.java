@@ -14,7 +14,14 @@ import javafx.stage.Stage;
 
 public class FXMLController implements Initializable {
     
-    // The addPartsAction redirects to the add pats pane when clicked
+    /**
+     * The addPartsAction activates when the add button is activated in the 
+     * parts group. It takes the Action Event e as it's parameter. It then
+     * builds a scene for the addPartForm and redirects to the 
+     * addPartFormController.
+     * @param e
+     * @throws Exception 
+     */
     @FXML
     private void addPartsAction(ActionEvent e) throws Exception{
         
@@ -29,16 +36,22 @@ public class FXMLController implements Initializable {
         addprtStage.show();
     }
     
-    // The addProductAction redirects to the add products pane when clicked
+    /**
+     * The addParductAction activates when the add button is activated in the 
+     * product group. It takes the Action Event (e) as it's parameter. It then
+     * builds a scene for the addProductForm and redirects to the 
+     * addProductFormController.
+     * 
+     * RUNTIME ERROR: java.lang.ClassNotFoundException
+     *  Corrected by passing the new stage as (Node)e.getSource).
+     *  The exception was a result of trying to add a new scene without passing
+     *  anything to it
+     * @param e
+     * @throws Exception 
+     */
     @FXML
     private void addProductAction(ActionEvent e) throws Exception{
         
-        /*
-        Run time error: java.lang.ClassNotFoundException
-        Corrected by passing the new stage as (Node)e.getSource).
-        the exception was a result of trying to add a new scene without passing
-        anything to it
-        */
         Parent addProdRoot = FXMLLoader.load(getClass().getResource("/fxml/addProductForm.fxml"));
         
         Scene scene = new Scene(addProdRoot);
@@ -49,15 +62,22 @@ public class FXMLController implements Initializable {
         addprodStage.setScene(scene);
         addprodStage.show();
     }
-    // The modifyPartsAction button redirects to the modify parts pane on event
+    
+    /**
+     * The modifyPartsAction activates when the modify button is activated in the 
+     * parts group. It takes the Action Event (e) as it's parameter. It then
+     * builds a scene for the modifyPartsForm and redirects to the 
+     * modifyPartsFormController.
+     * 
+     * RUNTIME ERROR: java.lang.ClassNotFoundException
+     *  Corrected by passing the new stage as (Node)e.getSource).
+     *  The exception was a result of trying to add a new scene without passing
+     *  anything to it
+     * @param e
+     * @throws Exception 
+     */
     @FXML
     private void modifyPartsAction (ActionEvent e) throws Exception{
-         /*
-        Run time error: java.lang.ClassNotFoundException
-        Corrected by passing the new stage as (Node)e.getSource).
-        the exception was a result of trying to add a new scene without passing
-        anything to it
-        */
         Parent modPrtRoot = FXMLLoader.load(getClass().getResource("/fxml/modifyPart.fxml"));
         
         Scene modPrtScene = new Scene(modPrtRoot);
@@ -69,15 +89,21 @@ public class FXMLController implements Initializable {
         modPrtStage.show();
     }
     
-    // The modifyProductAction button redirects to modify parts pane on event
+     /**
+     * The modifyProductAction activates when the modify button is activated in the 
+     * product group. It takes the Action Event (e) as it's parameter. It then
+     * builds a scene for the modifyProductForm and redirects to the 
+     * modifyProductFormController.
+     * 
+     * RUNTIME ERROR: java.lang.ClassNotFoundException
+     *  Corrected by passing the new stage as (Node)e.getSource).
+     *  The exception was a result of trying to add a new scene without passing
+     *  anything to it
+     * @param e
+     * @throws Exception 
+     */
     @FXML
     private void modifyProductAction(ActionEvent e) throws Exception{
-         /*
-        Run time error: java.lang.ClassNotFoundException
-        Corrected by passing the new stage as (Node)e.getSource).
-        the exception was a result of trying to add a new scene without passing
-        anything to it
-        */
         Parent modProdRoot = FXMLLoader.load(getClass().getResource("/fxml/modifyProductForm.fxml"));
         
         Scene modProdScene = new Scene(modProdRoot);
